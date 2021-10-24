@@ -65,22 +65,22 @@
         },
         {
             "name": "atymic/twitter",
-            "version": "3.1.10",
+            "version": "3.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atymic/twitter.git",
-                "reference": "73fc2bcdc02739ee55a4decc986b02d32bdbc191"
+                "reference": "3c03dcb7c27618660762de77a46dd85527a20508"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atymic/twitter/zipball/73fc2bcdc02739ee55a4decc986b02d32bdbc191",
-                "reference": "73fc2bcdc02739ee55a4decc986b02d32bdbc191",
+                "url": "https://api.github.com/repos/atymic/twitter/zipball/3c03dcb7c27618660762de77a46dd85527a20508",
+                "reference": "3c03dcb7c27618660762de77a46dd85527a20508",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/guzzle": "^6.4 || ^7.0",
-                "guzzlehttp/oauth-subscriber": "^0.4",
+                "guzzlehttp/oauth-subscriber": "^0.6",
                 "illuminate/support": "6 - 8",
                 "kamermans/guzzle-oauth2-subscriber": "^1.0",
                 "league/oauth2-client": "^2.6",
@@ -88,7 +88,7 @@
                 "php": "^7.4 || ^8.0",
                 "php-di/php-di": "^6.2",
                 "phpoption/phpoption": "^1.7",
-                "psr/log": "^1.1",
+                "psr/log": "^1.1 || ^2.0 || ^3.0",
                 "react/http": "^1.2",
                 "vlucas/phpdotenv": "*"
             },
@@ -146,38 +146,34 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-28T06:51:15+00:00"
+            "time": "2021-10-21T00:19:25+00:00"
         },
         {
             "name": "doctrine/inflector",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "9cf661f4eb38f7c881cac67c75ea9b00bf97b210"
+                "reference": "8b7ff3e4b7de6b2c84da85637b59fd2880ecaa89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/9cf661f4eb38f7c881cac67c75ea9b00bf97b210",
-                "reference": "9cf661f4eb38f7c881cac67c75ea9b00bf97b210",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/8b7ff3e4b7de6b2c84da85637b59fd2880ecaa89",
+                "reference": "8b7ff3e4b7de6b2c84da85637b59fd2880ecaa89",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^7.0",
-                "phpstan/phpstan": "^0.11",
-                "phpstan/phpstan-phpunit": "^0.11",
-                "phpstan/phpstan-strict-rules": "^0.11",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
+                "doctrine/coding-standard": "^8.2",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpstan/phpstan-strict-rules": "^0.12",
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
+                "vimeo/psalm": "^4.10"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
@@ -237,7 +233,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-29T15:13:26+00:00"
+            "time": "2021-10-22T20:16:43+00:00"
         },
         {
             "name": "evenement/evenement",
@@ -445,29 +441,33 @@
         },
         {
             "name": "guzzlehttp/oauth-subscriber",
-            "version": "0.4.0",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/oauth-subscriber.git",
-                "reference": "47b4b9cd0b31a6733a3cc500d4285a8363502485"
+                "reference": "8d6cab29f8397e5712d00a383eeead36108a3c1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/oauth-subscriber/zipball/47b4b9cd0b31a6733a3cc500d4285a8363502485",
-                "reference": "47b4b9cd0b31a6733a3cc500d4285a8363502485",
+                "url": "https://api.github.com/repos/guzzle/oauth-subscriber/zipball/8d6cab29f8397e5712d00a383eeead36108a3c1f",
+                "reference": "8d6cab29f8397e5712d00a383eeead36108a3c1f",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "guzzlehttp/guzzle": "^6.5|^7.2",
+                "guzzlehttp/psr7": "^1.7|^2.0",
                 "php": ">=5.5.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "~4.0|^9.3.3"
+            },
+            "suggest": {
+                "ext-openssl": "Required to sign using RSA-SHA1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.4-dev"
+                    "dev-master": "0.6-dev"
                 }
             },
             "autoload": {
@@ -492,7 +492,7 @@
                 "Guzzle",
                 "oauth"
             ],
-            "time": "2020-07-01T06:28:13+00:00"
+            "time": "2021-07-13T12:01:32+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -618,16 +618,16 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v8.48.2",
+            "version": "v8.67.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "fe4a74465a43829d2067b7e7f9c49078506ff289"
+                "reference": "2142c8cf75f1cf4416a5f414a6ed377de4b73ad9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/fe4a74465a43829d2067b7e7f9c49078506ff289",
-                "reference": "fe4a74465a43829d2067b7e7f9c49078506ff289",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/2142c8cf75f1cf4416a5f414a6ed377de4b73ad9",
+                "reference": "2142c8cf75f1cf4416a5f414a6ed377de4b73ad9",
                 "shasum": ""
             },
             "require": {
@@ -664,20 +664,20 @@
             ],
             "description": "The Illuminate Collections package.",
             "homepage": "https://laravel.com",
-            "time": "2021-06-21T13:44:14+00:00"
+            "time": "2021-10-20T22:21:30+00:00"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v8.48.2",
+            "version": "v8.67.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "199fcedc161ba4a0b83feaddc4629f395dbf1641"
+                "reference": "ab4bb4ec3b36905ccf972c84f9aaa2bdd1153913"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/199fcedc161ba4a0b83feaddc4629f395dbf1641",
-                "reference": "199fcedc161ba4a0b83feaddc4629f395dbf1641",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/ab4bb4ec3b36905ccf972c84f9aaa2bdd1153913",
+                "reference": "ab4bb4ec3b36905ccf972c84f9aaa2bdd1153913",
                 "shasum": ""
             },
             "require": {
@@ -708,11 +708,11 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2021-06-01T14:53:38+00:00"
+            "time": "2021-09-08T12:09:40+00:00"
         },
         {
             "name": "illuminate/macroable",
-            "version": "v8.48.2",
+            "version": "v8.67.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -754,16 +754,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v8.48.2",
+            "version": "v8.67.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "6d925ec70e060a5a16949c79216389c66746a07f"
+                "reference": "85b6513696d407280b54014865dca4e3fcdccce3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/6d925ec70e060a5a16949c79216389c66746a07f",
-                "reference": "6d925ec70e060a5a16949c79216389c66746a07f",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/85b6513696d407280b54014865dca4e3fcdccce3",
+                "reference": "85b6513696d407280b54014865dca4e3fcdccce3",
                 "shasum": ""
             },
             "require": {
@@ -773,7 +773,7 @@
                 "illuminate/collections": "^8.0",
                 "illuminate/contracts": "^8.0",
                 "illuminate/macroable": "^8.0",
-                "nesbot/carbon": "^2.31",
+                "nesbot/carbon": "^2.53.1",
                 "php": "^7.3|^8.0",
                 "voku/portable-ascii": "^1.4.8"
             },
@@ -782,8 +782,8 @@
             },
             "suggest": {
                 "illuminate/filesystem": "Required to use the composer class (^8.0).",
-                "league/commonmark": "Required to use Str::markdown() and Stringable::markdown() (^1.3).",
-                "ramsey/uuid": "Required to use Str::uuid() (^4.0).",
+                "league/commonmark": "Required to use Str::markdown() and Stringable::markdown() (^1.3|^2.0.2).",
+                "ramsey/uuid": "Required to use Str::uuid() (^4.2.2).",
                 "symfony/process": "Required to use the composer class (^5.1.4).",
                 "symfony/var-dumper": "Required to use the dd function (^5.1.4).",
                 "vlucas/phpdotenv": "Required to use the Env class and env helper (^5.2)."
@@ -814,20 +814,20 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2021-06-17T16:03:38+00:00"
+            "time": "2021-10-22T13:20:42+00:00"
         },
         {
             "name": "kamermans/guzzle-oauth2-subscriber",
-            "version": "v1.0.8",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kamermans/guzzle-oauth2-subscriber.git",
-                "reference": "18fb67c97f38c6b463f1ccdcad95b641666e42c1"
+                "reference": "0849d1b3f221fc98eba8b6ac2f0c35c39671bc5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kamermans/guzzle-oauth2-subscriber/zipball/18fb67c97f38c6b463f1ccdcad95b641666e42c1",
-                "reference": "18fb67c97f38c6b463f1ccdcad95b641666e42c1",
+                "url": "https://api.github.com/repos/kamermans/guzzle-oauth2-subscriber/zipball/0849d1b3f221fc98eba8b6ac2f0c35c39671bc5b",
+                "reference": "0849d1b3f221fc98eba8b6ac2f0c35c39671bc5b",
                 "shasum": ""
             },
             "require": {
@@ -850,12 +850,12 @@
                     "email": "stevekamerman@gmail.com"
                 }
             ],
-            "description": "OAuth 2.0 client for Guzzle 4, 5 and 6+",
+            "description": "OAuth 2.0 client for Guzzle 4, 5, 6 and 7+",
             "keywords": [
                 "Guzzle",
                 "oauth"
             ],
-            "time": "2020-12-10T00:38:57+00:00"
+            "time": "2021-08-11T22:33:53+00:00"
         },
         {
             "name": "kwn/number-to-words",
@@ -1029,27 +1029,28 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.49.0",
+            "version": "2.53.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "93d9db91c0235c486875d22f1e08b50bdf3e6eee"
+                "reference": "f4655858a784988f880c1b8c7feabbf02dfdf045"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/93d9db91c0235c486875d22f1e08b50bdf3e6eee",
-                "reference": "93d9db91c0235c486875d22f1e08b50bdf3e6eee",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/f4655858a784988f880c1b8c7feabbf02dfdf045",
+                "reference": "f4655858a784988f880c1b8c7feabbf02dfdf045",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": "^7.1.8 || ^8.0",
                 "symfony/polyfill-mbstring": "^1.0",
+                "symfony/polyfill-php80": "^1.16",
                 "symfony/translation": "^3.4 || ^4.0 || ^5.0"
             },
             "require-dev": {
                 "doctrine/orm": "^2.7",
-                "friendsofphp/php-cs-fixer": "^2.14 || ^3.0",
+                "friendsofphp/php-cs-fixer": "^3.0",
                 "kylekatarnls/multi-tester": "^2.0",
                 "phpmd/phpmd": "^2.9",
                 "phpstan/extension-installer": "^1.0",
@@ -1063,8 +1064,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev",
-                    "dev-3.x": "3.x-dev"
+                    "dev-3.x": "3.x-dev",
+                    "dev-master": "2.x-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -1090,15 +1091,15 @@
                 {
                     "name": "Brian Nesbitt",
                     "email": "brian@nesbot.com",
-                    "homepage": "http://nesbot.com"
+                    "homepage": "https://markido.com"
                 },
                 {
                     "name": "kylekatarnls",
-                    "homepage": "http://github.com/kylekatarnls"
+                    "homepage": "https://github.com/kylekatarnls"
                 }
             ],
             "description": "An API extension for DateTime that supports 281 different languages.",
-            "homepage": "http://carbon.nesbot.com",
+            "homepage": "https://carbon.nesbot.com",
             "keywords": [
                 "date",
                 "datetime",
@@ -1114,7 +1115,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-02T07:31:40+00:00"
+            "time": "2021-09-06T09:29:23+00:00"
         },
         {
             "name": "opis/closure",
@@ -1224,21 +1225,21 @@
         },
         {
             "name": "php-di/invoker",
-            "version": "2.3.0",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-DI/Invoker.git",
-                "reference": "992fec6c56f2d1ad1ad5fee28267867c85bfb8f9"
+                "reference": "5214cbe5aad066022cd845dbf313f0e47aed928f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI/Invoker/zipball/992fec6c56f2d1ad1ad5fee28267867c85bfb8f9",
-                "reference": "992fec6c56f2d1ad1ad5fee28267867c85bfb8f9",
+                "url": "https://api.github.com/repos/PHP-DI/Invoker/zipball/5214cbe5aad066022cd845dbf313f0e47aed928f",
+                "reference": "5214cbe5aad066022cd845dbf313f0e47aed928f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
-                "psr/container": "~1.0"
+                "psr/container": "^1.0|^2.0"
             },
             "require-dev": {
                 "athletic/athletic": "~0.1.8",
@@ -1271,20 +1272,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-01-15T10:25:40+00:00"
+            "time": "2021-07-30T15:05:32+00:00"
         },
         {
             "name": "php-di/php-di",
-            "version": "6.3.4",
+            "version": "6.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-DI/PHP-DI.git",
-                "reference": "f53bcba06ab31b18e911b77c039377f4ccd1f7a5"
+                "reference": "b8126d066ce144765300ee0ab040c1ed6c9ef588"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI/PHP-DI/zipball/f53bcba06ab31b18e911b77c039377f4ccd1f7a5",
-                "reference": "f53bcba06ab31b18e911b77c039377f4ccd1f7a5",
+                "url": "https://api.github.com/repos/PHP-DI/PHP-DI/zipball/b8126d066ce144765300ee0ab040c1ed6c9ef588",
+                "reference": "b8126d066ce144765300ee0ab040c1ed6c9ef588",
                 "shasum": ""
             },
             "require": {
@@ -1343,7 +1344,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-10T08:04:48+00:00"
+            "time": "2021-09-02T09:49:58+00:00"
         },
         {
             "name": "php-di/phpdoc-reader",
@@ -1385,29 +1386,29 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.7.5",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "994ecccd8f3283ecf5ac33254543eb0ac946d525"
+                "reference": "5455cb38aed4523f99977c4a12ef19da4bfe2a28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/994ecccd8f3283ecf5ac33254543eb0ac946d525",
-                "reference": "994ecccd8f3283ecf5ac33254543eb0ac946d525",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/5455cb38aed4523f99977c4a12ef19da4bfe2a28",
+                "reference": "5455cb38aed4523f99977c4a12ef19da4bfe2a28",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9 || ^7.0 || ^8.0"
+                "php": "^7.0 || ^8.0"
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.4.1",
-                "phpunit/phpunit": "^4.8.35 || ^5.7.27 || ^6.5.6 || ^7.0 || ^8.0 || ^9.0"
+                "phpunit/phpunit": "^6.5.14 || ^7.0.20 || ^8.5.19 || ^9.5.8"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -1426,7 +1427,7 @@
                 },
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@alt-three.com"
+                    "email": "hello@gjcampbell.co.uk"
                 }
             ],
             "description": "Option Type for PHP",
@@ -1446,7 +1447,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-20T17:29:33+00:00"
+            "time": "2021-08-28T21:27:29+00:00"
         },
         {
             "name": "psr/container",
@@ -1800,22 +1801,22 @@
         },
         {
             "name": "react/dns",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/dns.git",
-                "reference": "a45784faebf8fbd59058fad2d8497f71a787d20c"
+                "reference": "2a5a74ab751e53863b45fb87e1d3913884f88248"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/dns/zipball/a45784faebf8fbd59058fad2d8497f71a787d20c",
-                "reference": "a45784faebf8fbd59058fad2d8497f71a787d20c",
+                "url": "https://api.github.com/repos/reactphp/dns/zipball/2a5a74ab751e53863b45fb87e1d3913884f88248",
+                "reference": "2a5a74ab751e53863b45fb87e1d3913884f88248",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
                 "react/cache": "^1.0 || ^0.6 || ^0.5",
-                "react/event-loop": "^1.0 || ^0.5",
+                "react/event-loop": "^1.2",
                 "react/promise": "^3.0 || ^2.7 || ^1.2.1",
                 "react/promise-timer": "^1.2"
             },
@@ -1872,27 +1873,27 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-25T10:54:13+00:00"
+            "time": "2021-07-11T12:40:34+00:00"
         },
         {
             "name": "react/event-loop",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/event-loop.git",
-                "reference": "6d24de090cd59cfc830263cfba965be77b563c13"
+                "reference": "be6dee480fc4692cec0504e65eb486e3be1aa6f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/6d24de090cd59cfc830263cfba965be77b563c13",
-                "reference": "6d24de090cd59cfc830263cfba965be77b563c13",
+                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/be6dee480fc4692cec0504e65eb486e3be1aa6f2",
+                "reference": "be6dee480fc4692cec0504e65eb486e3be1aa6f2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7.0 || ^6.4 || ^5.7 || ^4.8.35"
+                "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.35"
             },
             "suggest": {
                 "ext-event": "~1.0 for ExtEventLoop",
@@ -1909,36 +1910,68 @@
             "license": [
                 "MIT"
             ],
+            "authors": [
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@clue.engineering",
+                    "homepage": "https://clue.engineering/"
+                },
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "reactphp@ceesjankiewiet.nl",
+                    "homepage": "https://wyrihaximus.net/"
+                },
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com",
+                    "homepage": "https://sorgalla.com/"
+                },
+                {
+                    "name": "Chris Boden",
+                    "email": "cboden@gmail.com",
+                    "homepage": "https://cboden.dev/"
+                }
+            ],
             "description": "ReactPHP's core reactor event loop that libraries can use for evented I/O.",
             "keywords": [
                 "asynchronous",
                 "event-loop"
             ],
-            "time": "2020-01-01T18:39:52+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/WyriHaximus",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/clue",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-07-11T12:31:24+00:00"
         },
         {
             "name": "react/http",
-            "version": "v1.3.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/http.git",
-                "reference": "bc537273d11ee769c723a830e63aa33c0c35a530"
+                "reference": "8a0fd7c0aa74f0db3008b1e47ca86c613cbb040e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/http/zipball/bc537273d11ee769c723a830e63aa33c0c35a530",
-                "reference": "bc537273d11ee769c723a830e63aa33c0c35a530",
+                "url": "https://api.github.com/repos/reactphp/http/zipball/8a0fd7c0aa74f0db3008b1e47ca86c613cbb040e",
+                "reference": "8a0fd7c0aa74f0db3008b1e47ca86c613cbb040e",
                 "shasum": ""
             },
             "require": {
                 "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
                 "php": ">=5.3.0",
                 "psr/http-message": "^1.0",
-                "react/event-loop": "^1.0 || ^0.5",
+                "react/event-loop": "^1.2",
                 "react/promise": "^2.3 || ^1.2.1",
                 "react/promise-stream": "^1.1",
-                "react/socket": "^1.6",
-                "react/stream": "^1.1",
+                "react/socket": "^1.9",
+                "react/stream": "^1.2",
                 "ringcentral/psr7": "^1.2"
             },
             "require-dev": {
@@ -2004,7 +2037,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-04-11T18:07:28+00:00"
+            "time": "2021-08-04T12:24:55+00:00"
         },
         {
             "name": "react/promise",
@@ -2054,16 +2087,16 @@
         },
         {
             "name": "react/promise-stream",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise-stream.git",
-                "reference": "6384d8b76cf7dcc44b0bf3343fb2b2928412d1fe"
+                "reference": "3ebd94fe0d8edbf44937948af28d02d5437e9949"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise-stream/zipball/6384d8b76cf7dcc44b0bf3343fb2b2928412d1fe",
-                "reference": "6384d8b76cf7dcc44b0bf3343fb2b2928412d1fe",
+                "url": "https://api.github.com/repos/reactphp/promise-stream/zipball/3ebd94fe0d8edbf44937948af28d02d5437e9949",
+                "reference": "3ebd94fe0d8edbf44937948af28d02d5437e9949",
                 "shasum": ""
             },
             "require": {
@@ -2073,7 +2106,7 @@
             },
             "require-dev": {
                 "clue/block-react": "^1.0",
-                "phpunit/phpunit": "^7.0 || ^6.4 || ^5.7 || ^4.8.35",
+                "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.35",
                 "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3",
                 "react/promise-timer": "^1.0"
             },
@@ -2093,7 +2126,23 @@
             "authors": [
                 {
                     "name": "Christian Lück",
-                    "email": "christian@lueck.tv"
+                    "email": "christian@clue.engineering",
+                    "homepage": "https://clue.engineering/"
+                },
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "reactphp@ceesjankiewiet.nl",
+                    "homepage": "https://wyrihaximus.net/"
+                },
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com",
+                    "homepage": "https://sorgalla.com/"
+                },
+                {
+                    "name": "Chris Boden",
+                    "email": "cboden@gmail.com",
+                    "homepage": "https://cboden.dev/"
                 }
             ],
             "description": "The missing link between Promise-land and Stream-land for ReactPHP",
@@ -2106,29 +2155,39 @@
                 "stream",
                 "unwrap"
             ],
-            "time": "2019-07-03T12:29:10+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/WyriHaximus",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/clue",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-10-18T10:47:09+00:00"
         },
         {
             "name": "react/promise-timer",
-            "version": "v1.6.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise-timer.git",
-                "reference": "daee9baf6ef30c43ea4c86399f828bb5f558f6e6"
+                "reference": "607dd79990e32fcb402cb0a176b4a4be12f97e7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise-timer/zipball/daee9baf6ef30c43ea4c86399f828bb5f558f6e6",
-                "reference": "daee9baf6ef30c43ea4c86399f828bb5f558f6e6",
+                "url": "https://api.github.com/repos/reactphp/promise-timer/zipball/607dd79990e32fcb402cb0a176b4a4be12f97e7c",
+                "reference": "607dd79990e32fcb402cb0a176b4a4be12f97e7c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3",
-                "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3.5",
+                "react/event-loop": "^1.2",
                 "react/promise": "^3.0 || ^2.7.0 || ^1.2.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.0 || ^5.7 || ^4.8.35"
+                "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.35"
             },
             "type": "library",
             "autoload": {
@@ -2146,7 +2205,23 @@
             "authors": [
                 {
                     "name": "Christian Lück",
-                    "email": "christian@lueck.tv"
+                    "email": "christian@clue.engineering",
+                    "homepage": "https://clue.engineering/"
+                },
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "reactphp@ceesjankiewiet.nl",
+                    "homepage": "https://wyrihaximus.net/"
+                },
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com",
+                    "homepage": "https://sorgalla.com/"
+                },
+                {
+                    "name": "Chris Boden",
+                    "email": "cboden@gmail.com",
+                    "homepage": "https://cboden.dev/"
                 }
             ],
             "description": "A trivial implementation of timeouts for Promises, built on top of ReactPHP.",
@@ -2159,30 +2234,40 @@
                 "timeout",
                 "timer"
             ],
-            "time": "2020-07-10T12:18:06+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/WyriHaximus",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/clue",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-07-11T13:08:51+00:00"
         },
         {
             "name": "react/socket",
-            "version": "v1.7.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/socket.git",
-                "reference": "5d39e3fa56ea7cc443c86f2788a40867cdba1659"
+                "reference": "aa6e3f8ebcd6dec3ad1ee92a449b4cc341994001"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/socket/zipball/5d39e3fa56ea7cc443c86f2788a40867cdba1659",
-                "reference": "5d39e3fa56ea7cc443c86f2788a40867cdba1659",
+                "url": "https://api.github.com/repos/reactphp/socket/zipball/aa6e3f8ebcd6dec3ad1ee92a449b4cc341994001",
+                "reference": "aa6e3f8ebcd6dec3ad1ee92a449b4cc341994001",
                 "shasum": ""
             },
             "require": {
                 "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
                 "php": ">=5.3.0",
-                "react/dns": "^1.7",
-                "react/event-loop": "^1.0 || ^0.5",
+                "react/dns": "^1.8",
+                "react/event-loop": "^1.2",
                 "react/promise": "^2.6.0 || ^1.2.1",
                 "react/promise-timer": "^1.4.0",
-                "react/stream": "^1.1"
+                "react/stream": "^1.2"
             },
             "require-dev": {
                 "clue/block-react": "^1.2",
@@ -2239,30 +2324,30 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-25T11:05:10+00:00"
+            "time": "2021-08-03T12:37:06+00:00"
         },
         {
             "name": "react/stream",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/stream.git",
-                "reference": "7c02b510ee3f582c810aeccd3a197b9c2f52ff1a"
+                "reference": "7a423506ee1903e89f1e08ec5f0ed430ff784ae9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/7c02b510ee3f582c810aeccd3a197b9c2f52ff1a",
-                "reference": "7c02b510ee3f582c810aeccd3a197b9c2f52ff1a",
+                "url": "https://api.github.com/repos/reactphp/stream/zipball/7a423506ee1903e89f1e08ec5f0ed430ff784ae9",
+                "reference": "7a423506ee1903e89f1e08ec5f0ed430ff784ae9",
                 "shasum": ""
             },
             "require": {
                 "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
                 "php": ">=5.3.8",
-                "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3.5"
+                "react/event-loop": "^1.2"
             },
             "require-dev": {
                 "clue/stream-filter": "~1.2",
-                "phpunit/phpunit": "^7.0 || ^6.4 || ^5.7 || ^4.8.35"
+                "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.35"
             },
             "type": "library",
             "autoload": {
@@ -2273,6 +2358,28 @@
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@clue.engineering",
+                    "homepage": "https://clue.engineering/"
+                },
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "reactphp@ceesjankiewiet.nl",
+                    "homepage": "https://wyrihaximus.net/"
+                },
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com",
+                    "homepage": "https://sorgalla.com/"
+                },
+                {
+                    "name": "Chris Boden",
+                    "email": "cboden@gmail.com",
+                    "homepage": "https://cboden.dev/"
+                }
             ],
             "description": "Event-driven readable and writable streams for non-blocking I/O in ReactPHP",
             "keywords": [
@@ -2285,7 +2392,17 @@
                 "stream",
                 "writable"
             ],
-            "time": "2020-05-04T10:17:57+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/WyriHaximus",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/clue",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-07-11T12:37:55+00:00"
         },
         {
             "name": "ringcentral/psr7",
@@ -2487,16 +2604,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.23.0",
+            "version": "v1.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "2df51500adbaebdc4c38dea4c89a2e131c45c8a1"
+                "reference": "9174a3d80210dca8daa7f31fec659150bbeabfc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2df51500adbaebdc4c38dea4c89a2e131c45c8a1",
-                "reference": "2df51500adbaebdc4c38dea4c89a2e131c45c8a1",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9174a3d80210dca8daa7f31fec659150bbeabfc6",
+                "reference": "9174a3d80210dca8daa7f31fec659150bbeabfc6",
                 "shasum": ""
             },
             "require": {
@@ -2560,20 +2677,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-27T09:27:20+00:00"
+            "time": "2021-05-27T12:26:48+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.23.0",
+            "version": "v1.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "eca0bf41ed421bed1b57c4958bab16aa86b757d0"
+                "reference": "1100343ed1a92e3a38f9ae122fc0eb21602547be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/eca0bf41ed421bed1b57c4958bab16aa86b757d0",
-                "reference": "eca0bf41ed421bed1b57c4958bab16aa86b757d0",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/1100343ed1a92e3a38f9ae122fc0eb21602547be",
+                "reference": "1100343ed1a92e3a38f9ae122fc0eb21602547be",
                 "shasum": ""
             },
             "require": {
@@ -2640,27 +2757,27 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-19T12:13:01+00:00"
+            "time": "2021-07-28T13:41:28+00:00"
         },
         {
             "name": "symfony/translation",
-            "version": "v5.3.2",
+            "version": "v5.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "7e2603bcc598e14804c4d2359d8dc4ee3c40391b"
+                "reference": "6e69f3551c1a3356cf6ea8d019bf039a0f8b6886"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/7e2603bcc598e14804c4d2359d8dc4ee3c40391b",
-                "reference": "7e2603bcc598e14804c4d2359d8dc4ee3c40391b",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/6e69f3551c1a3356cf6ea8d019bf039a0f8b6886",
+                "reference": "6e69f3551c1a3356cf6ea8d019bf039a0f8b6886",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
                 "symfony/deprecation-contracts": "^2.1",
                 "symfony/polyfill-mbstring": "~1.0",
-                "symfony/polyfill-php80": "^1.15",
+                "symfony/polyfill-php80": "^1.16",
                 "symfony/translation-contracts": "^2.3"
             },
             "conflict": {
@@ -2674,7 +2791,7 @@
                 "symfony/translation-implementation": "2.3"
             },
             "require-dev": {
-                "psr/log": "~1.0",
+                "psr/log": "^1|^2|^3",
                 "symfony/config": "^4.4|^5.0",
                 "symfony/console": "^4.4|^5.0",
                 "symfony/dependency-injection": "^5.0",
@@ -2732,7 +2849,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-06T09:51:56+00:00"
+            "time": "2021-08-26T08:22:53+00:00"
         },
         {
             "name": "symfony/translation-contracts",
